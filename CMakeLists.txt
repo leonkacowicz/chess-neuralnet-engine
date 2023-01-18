@@ -21,6 +21,7 @@ endif()
 include(dependencies/eigen.cmake)
 include(dependencies/chess-core.cmake)
 include(dependencies/chess-uci.cmake)
+include(dependencies/chess-neuralnet.cmake)
 
 enable_testing()
 add_subdirectory(src)
