@@ -10,7 +10,8 @@ ExternalProject_Add(
 add_library(libchess-core IMPORTED STATIC GLOBAL)
 add_dependencies(libchess-core chess-core-external)
 include_directories("${CMAKE_BINARY_DIR}/chess-core-external/src/chess-core-external/src/chess/include")
-set_target_properties(libchess-core PROPERTIES
+set_target_properties(
+        libchess-core PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_BINARY_DIR}/chess-core-external/src/chess-core-external/"
         IMPORTED_LOCATION "${CMAKE_BINARY_DIR}/chess-core-external/src/chess-core-external-build/src/chess/libchess.a"
-        )
+)
